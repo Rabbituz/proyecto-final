@@ -1,0 +1,112 @@
+body {
+
+    .main-proyecto {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+        margin-top: 40px;
+
+        .proyecto-titulo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            h2 {
+                font-size: calc(30rem / 16);
+            }
+
+            a {
+                text-decoration: none;
+                color: $color-white;
+                border-bottom: 2px solid $color-green;
+                text-transform: uppercase;
+                letter-spacing: 2.286px;
+                line-height: 36px;
+            }
+        }
+
+        .container-proyecto {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+
+            picture {
+                width: 100%;
+                height: 100%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            
+            .proyecto-name {
+                display: flex;
+                flex-direction: column;
+                row-gap: 7px;
+
+                h3 {
+                    text-transform: uppercase;
+                    font-size: calc(24rem / 16);
+                }
+
+                div {
+                    display: flex;
+                    column-gap: 18px;
+
+                    span {
+                        font-size: calc(18rem / 16);
+                        text-transform: uppercase;
+                        color: $color-grey;
+                    }
+                }
+            }
+
+            .proyecto-code {
+                display: flex;
+                column-gap: 32px;
+
+                a {
+                    text-transform: uppercase;
+                    letter-spacing: 2.286px;
+                    font-weight: 700;
+                    color: $color-white;
+                    text-decoration: none;
+                    border-bottom: 2px solid $color-green;
+                    line-height: 36px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+    body {
+
+        .main-proyecto {
+            flex-wrap: wrap;
+            flex-direction: row;
+            width: 100%;
+            column-gap: 20px;
+            row-gap: 60px;
+            max-width: 1220px;
+
+            .proyecto-titulo {
+                width: 100%;
+
+                h2 {
+                    font-size: calc(72rem / 16);
+                }
+            }
+
+            .container-proyecto {
+                width: 48%;
+            }
+            
+            .line {
+                width: 100%;
+            }
+        }
+
+    }
+}
